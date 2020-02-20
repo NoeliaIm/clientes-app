@@ -1,0 +1,10 @@
+footer div p {
+  color: antiquewhite;
+  text-align: center;
+}
+footer{
+  position: absolute;
+  bottom: 0px;
+  height: 60px;
+  width: 100%;
+}
