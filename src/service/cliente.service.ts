@@ -17,6 +17,12 @@ export class ClienteService {
 
   getClientes(): Observable<any> {
     const headers = new HttpHeaders().set('Content-type', 'application/json');
-    return this.http.get(this.url + '/api/clientes', {headers});
+    return this.http.get(this.url + '/api/clientes', { headers });
+  }
+
+  createCliente(cliente): Observable<any> {
+    const headers = new HttpHeaders().set('Content-type', 'application/json');
+    const json = JSON.stringify(cliente);
+    return this.http.post(this.url + '/api/clientes', json, { headers });
   }
 }
